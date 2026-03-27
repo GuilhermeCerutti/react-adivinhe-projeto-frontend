@@ -19,7 +19,7 @@ export default function App() {
   const ATTEMPTS_MARGIN = 5;
 
   //função para o onRestart
-  function hendleRestartGame() {
+  function handleRestartGame() {
     const isConfirmed = window.confirm(
       "Você tem certeza que deseja reiniciar o jogo?",
     );
@@ -109,7 +109,7 @@ export default function App() {
         <Header
           current={lettersUsed.length}
           max={challenge.word.length + ATTEMPTS_MARGIN} // pegando quantas letras tem
-          onRestart={hendleRestartGame}
+          onRestart={handleRestartGame}
         />
         <Tip tip={challenge.tip} />
 
